@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
+    <link rel="stylesheet" href="assets/css/nav.css">
+    <link rel="stylesheet" href="assets/css/elements.css">
     <link rel="stylesheet" href="assets/css/styles.css">
     <!--Font Awesome Icons script-->
     <script src="https://kit.fontawesome.com/82941e4f3d.js" crossorigin="anonymous"></script>
@@ -12,33 +14,73 @@
 
 </head>
 <body >
-    <aside class="menu">
-        <section class="main-content menu-content">
-            <h1><a href="#">Pedro Braga</a></h1>
-            <button onclick="showMenuNav()">
-                <i class="fa-solid fa-bars"></i>
+    <aside class="nav white-bg">
+        <div class="main-content menu-content ">
+            <button onclick="buttonScrollToSection('introducao')">
+                <img id="logo-site" src="assets/img/c720fc9bf23ef668-sticker.png" alt="logo-png">
+                <h1></h1>
             </button>
-        </section>
-        <nav id="menu-nav-bar">
+            <button onclick="showMenuNav()">
+                <i class="fa-solid fa-bars" id="button-bars-icon"></i>
+            </button>
+        </div>
+        <nav id="nav-bar">
             <ul>
-                <li><a href="#introducao" onclick="showMenuNav()">Introdução</a></li>
-                <li><a href="#projetos" onclick="showMenuNav()">Projetos</a></li>
-                <li><a href="" onclick="showMenuNav()">Experiências</a></li>
-                <li><a href="" onclick="showMenuNav()">Contatos</a></li>
+                <li><a  onclick="buttonScrollToSection('introducao');showMenuNav();">Introdução</a></li>
+                <li><a  onclick="buttonScrollToSection('projetos');showMenuNav();">Projetos</a></li>
+                <li><a  onclick="buttonScrollToSection('experiencias');showMenuNav()">Experiências</a></li>
             </ul>
         </nav>
         </aside>
-    <section class="main-bg" id="introducao">
-        <div class="main-content main-section" >
-            <h1>Lorem</h1>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In nostrum ab a, eum vel dolorum magni eos dolores optio eaque quo iste rerum eius labore voluptas ea hic, velit fuga!</p>
+    <section class="main-bg page-height flex" id="introducao">
+        <div class="main-content  flex justify-arround align-center p-5 " >
+            <div>
+                <img class="rounded-full" src="assets/img/perfil_profissional.png" alt="">  
+            </div>
+            
+            <div class="flex flex-column align-center justify-space-between m-2">
+                <h1 class="">Ola, me chamo Pedro Braga!</h1>
+                <p class="">Sou Engenheiro de Software em formação, atualmente cursando na Universidade de Brasília. Estou descobrindo novas áreas e atualmente me aprofundando no desenvolvimento web full-stack.</p>
+                <ul class="links-contact flex align-center">
+                    <li><a href="https://github.com/Stain19"><i class="fa-brands fa-github icons"></i></a></li>
+                    <li><a href="https://www.linkedin.com/in/pedro-henrique-braga-de-morais-31017337/"><i class="fa-brands fa-linkedin icons"></i></a></li>
+                    <li><a href="mailto:pedrobragamorais@gmail.com"><i class="fa-solid fa-envelope icons"></i></a></li>
+                </ul>
+            </div>
         </div>
     </section>
-    <section id="projetos">
-        <div class="white-bg main-section">
-            <div class="main-content">
-                <h1>Lorem</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nulla, cumque accusamus veniam iure officia sit doloremque corporis natus sed. Blanditiis itaque unde possimus qui quisquam ex illo repellendus recusandae aliquid.</p>
+    <section class="page-height white-bg flex" id="projetos">
+        <div class="main-section projects-container gap-1">
+            <div class="project-container sec-bg flex flex-column justify-center align-center p-3 gap-1 border-standard" id="teammates" href="">
+                <img src="assets/img/organization-order-svgrepo-com.svg" alt="">
+                <h5>Teammates<br>(Contribuição)</h5>
+                <p>TEAMMATES é uma ferramenta online gratuita para gerenciar avaliações de colegas e outros caminhos de feedback de seus alunos. É fornecido como um serviço baseado em nuvem para educadores/estudantes e atualmente é usado por centenas de universidades em todo o mundo.</p>
+            </div>
+            <div class="project-container sec-bg flex flex-column justify-center align-center p-3 gap-1 border-standard" id="chess-system">
+                <img src="assets/img/chess-svgrepo-com.svg" alt="">
+                <h5>Chess-System Java</h5>
+                <p>Sistema CLI de Xadrez desenvolvido para exercitar os conhecimentos em Java</p>
+            </div>
+            <div class="project-container sec-bg flex flex-column justify-center align-center p-3 gap-1 border-standard" id="orcamentos" onclick="">
+                <img src="assets/img/shop-svgrepo-com.svg" alt="">
+                <h5>Sistema de Orcamentos em Java</h5>
+                <p> Sitema de controle de orcamentos em Java, desenvolvido para exercitar os conhecimentos de OOP e java swing.</p>
+            </div>
+        </div>
+    </section>
+    <section class="page-height main-bg flex" id="experiencias">
+        <div class="main-section experiences-container gap-1">
+            <div class="experience-content flex  flex-column white-bg align-center p-3 border-standard gap-1" id="pagglo">
+                <img src="assets/img/pagglo.jpeg" alt="">
+                <p>
+                    Funcionário de TIFuncionário de TI<br>
+                    BRISA Sociedade para o Desenvolvimento da Tecnologia da Informação · TraineeBRISA Sociedade para o Desenvolvimento da Tecnologia da Informação · Trainee mar de 2023 - jun de 2023 · 4 mesesDe mar de 2023 até jun de 2023 · 4 meses Brasília, Distrito Federal, Brasil · Remota</p>
+            </div>
+            <div class="experience-content flex  flex-column white-bg align-center p-3 border-standard gap-1" id="lappis">
+                <img src="assets/img/lappis_rocks_logo.jpeg" alt="">
+            </div>
+            <div class="experience-content flex  flex-column white-bg align-center p-3 border-standard gap-1" id="brisa">
+                <img src="assets/img/brisa-logo.jpeg" alt="">
             </div>
         </div>
     </section>
